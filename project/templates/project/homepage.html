@@ -1,0 +1,28 @@
+{% extends "project/alpha_base.html"%}
+
+{% block header %}
+  {% with 'active' as home %}
+  {{block.super}}
+  {% endwith %}
+{% endblock %}
+
+{% block main %}
+<h1 class="cover-heading">Welcome to our alpha version!</h1>
+<p class="lead">This is a teaching tool where you can customize games. You will choose what you want to teach and the student will choose what wants to play. Go to Teach section to start!</p>
+<div class="input-group mb-3">
+  <input id="kick-input-code" type="text" class="form-control" placeholder="Introduce your game code" aria-label="Introduce your game code" aria-describedby="code-game">
+  <div class="input-group-append">
+    <button onclick="playCode()" class="btn btn-outline-secondary" type="button">Play</button>
+  </div>
+</div>
+
+
+<script>
+  function playCode() {
+    var input = document.getElementById("kick-input-code");
+    var gameUrl= window.location.href +"games/"+ input.value;
+    window.location.replace(gameUrl);
+  }
+
+</script>
+{% endblock%}

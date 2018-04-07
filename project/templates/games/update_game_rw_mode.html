@@ -1,0 +1,51 @@
+{% extends "project/teach.html" %}
+
+{% block head_title %}Update game{% endblock %}
+
+{% block main %}
+  <h3>{% block main_title %}Update game{% endblock %}: right-wrong mode</h3>
+
+  <div class="alert alert-warning text-left" role="alert">
+    Very important! FOLLOW THE SYNTAX! Write one words per line</br>
+    <p style="margin-left:15px">
+      <strong>
+        <i>
+          word1</br>
+          word2</br>
+          ...
+        </i>
+      </strong>
+    </p>
+
+    For example:</br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p style="margin-left:15px">
+            Right words:</br>
+            <i>
+              choose</br>
+              do</br>
+              be</br>
+              run</br>
+            </i>
+          </p>
+        </div>
+        <div class="col-sm">
+          <p style="margin-left:15px">
+            Wrong words:</br>
+            <i>
+              cook</br>
+              ask</br>
+              call</br>
+              check</br>
+            </i>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  {% include "project/_form.html" with button_label="Save" text_align="text-left" %}
+{% endblock %}

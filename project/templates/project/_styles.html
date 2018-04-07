@@ -1,0 +1,19 @@
+{% load static %}
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap.css' %}"> -->
+{% now "j" as current_day %}
+{% if current_day|divisibleby:"5" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap-purple.css' %}">
+{% elif current_day|divisibleby:"4" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap-blue.css' %}">
+{% elif current_day|divisibleby:"3" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap-green.css' %}">
+{% elif current_day|divisibleby:"2" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap-yellow.css' %}">
+{% else %}
+  <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap-red.css' %}">
+{% endif %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'project/css/style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >

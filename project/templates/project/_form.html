@@ -1,0 +1,76 @@
+{% load project_tags %}
+
+<form action="{{ action }}" method="post" class="{{ text_align }}">
+    {% csrf_token %}
+
+    {% for field in form %}
+
+      {% if field.help_text %}
+        <h4 class="text-center">{{ field.help_text}}</h4>
+      {% endif %}
+
+      {% if field|is_checkbox %}
+        <div class="form-check">
+          <!-- <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> -->
+          {{field|addcss:"form-check-input"}}
+          <label class="form-check-label" for="id_checkbox_{{ field.name }}">
+            {{field.label}}
+          </label>
+        </div>
+      {% else %}
+
+
+        {% if field|is_textarea %}
+          <div class="form-group">
+              <label for="id_textarea_{{ field.name }}">{{ field.label }}</label>
+              <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+              {{field|addcss:"form-control"}}
+          </div>
+        {% else %}
+
+
+          {% if field|is_select %}
+           <div class="form-group">
+               <label for="exampleFormControlSelect1">{{ field.label}}</label>
+               <select class="form-control" id="id_select_{{ field.name }}" name="{{ field.name }}">
+                 {% for value, text in field.field.choices %}
+                   {% if value == field.value %}
+                     <option value="{{value}}" selected>{{text}}</option>
+                   {% else %}
+                     <option value="{{value}}">{{text}}</option>
+                   {% endif %}
+                 {% endfor %}
+               </select>
+             </div>
+          {% else %}
+
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">{{ field.label }}</label>
+              <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
+              {{field|addcss:"form-control"}}
+            </div>
+
+            {% for error in field.errors %}
+              <div class="invalid-feedback">
+                {{ error }}
+              </div>
+            {% endfor %}
+
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if extra_content %}
+      <div id="id_extra_content">
+        {% include extra_content %}
+      </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary">
+
+        {{ button_label }}
+
+    </button>
+</form>

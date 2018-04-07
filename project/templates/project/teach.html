@@ -1,0 +1,66 @@
+{% extends "project/alpha_base.html" %}
+
+{% block head_title %}Teach{% endblock %}
+
+{% block header %}
+  {% with 'active' as teach %}
+  {{block.super}}
+  {% endwith %}
+{% endblock %}
+
+{% block main %}
+
+
+
+<div class="alert alert-warning" role="alert">
+  All created games are public in this version, they are shown in the list bellow. You can create your own game by clicking "Create game" button, it will be public but no one can know who created it.
+</br>Let you know that your games can be deleted or modified by other users, this is just a first test version.
+</div>
+
+<p>
+  <a type="button" class="btn btn-primary" href="{% url 'games:create_game' %}">New game</a>
+</p>
+
+<h3>Created games by testers:</h3>
+
+<table class="table table-sm panel">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Code</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="kick-table-games" class=" accordion-group">
+
+    {% for game in object_list %}
+      <tr>
+        <td>{{ game.title }}</td>
+        <td>{{ game.description }}</td>
+        <td>{{ game.slug }}</td>
+        <td>
+          <a href="{% url 'games:update_game' game.slug%}"><i class="material-icons">mode_edit</i></a>
+          <a href="{% url 'games:delete_game' game.slug%}"><i class="material-icons">delete</i></a>
+          <a href="{% url 'games:game' game.slug%}"><i class="material-icons">play_arrow</i></a>
+          <!-- <a href="{% url 'games:xml_game' game.slug%}">XML</a> -->
+        </td>
+
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="4">
+          No games created
+        </td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+<div class="alert alert-secondary" role="alert">
+  Remember this is an alpha version! You may find errors. We would appreciate if you spend a few minutes reporting them or giving us your opinion.
+  <a href="mailto:kickhomework@gmail.com?Subject=Kickhomework%20comment">Contact.</a>
+</div>
+
+{% endblock%}

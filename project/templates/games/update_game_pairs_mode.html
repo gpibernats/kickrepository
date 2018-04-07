@@ -1,0 +1,33 @@
+{% extends "project/teach.html" %}
+
+{% block head_title %}Update game{% endblock %}
+
+{% block main %}
+  <h3>{% block main_title %}Update game{% endblock %}: pairs mode</h3>
+
+  <div class="alert alert-warning text-left" role="alert">
+    Very important! FOLLOW THE SYNTAX! Write one pair of words every line, separated by a semicolon (;)</br>
+    <p style="margin-left:15px">
+      <strong>
+        <i>
+          word1 ; word1_pair</br>
+          word2 ; word2_pair</br>
+          ...
+        </i>
+      </strong>
+    </p>
+
+    For example:</br>
+    <p style="margin-left:15px">
+      <i>
+        hi;hola</br>
+        2+2;4</br>
+        fruit ; apple</br>
+        Brad Pitt; actor</br>
+        Stephen Hawking ;scientific</br>
+      </i>
+    </p>
+
+  </div>
+  {% include "project/_form.html" with button_label="Save" text_align="text-left" %}
+{% endblock %}

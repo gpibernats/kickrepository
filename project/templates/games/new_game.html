@@ -1,0 +1,55 @@
+{% extends "project/teach.html" %}
+{% load static %}
+
+{% block head_title %}New game{% endblock %}
+
+{% block main %}
+
+<div class="alert alert-warning" role="alert">
+  In Kickhomework the teacher does not need to think about games, teacher just needs to focus on the content it wants to teach.
+  For now, you can enter the educational content in two different ways.
+</div>
+
+<h3>Create new game</h3>
+</br>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rigth-Wrong mode</h5>
+        <p class="card-text">
+          It needs two lists of words: a list of correct words and a list of incorrect words. For example:
+          </br>
+          <i>
+            </br>Game title: Irregular verbs
+            </br>Description: choose the irregular verbs
+            </br>Right words: choose, do, be, run
+            </br>Wrong words: cook, ask, call, check, dream
+          </i>
+        </p>
+        <a href="{% url 'games:create_game_rwmode'%}" class="btn btn-primary">Get started</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pairs mode</h5>
+        <p class="card-text">  It needs a list of word pairs. For example:
+          </br>
+          <i>
+            </br>Game title: Spanish basics
+            </br>Description: match every word with his translation
+            </br>Pairs: hi - hola, bye - adiós, thanks - gracias
+          </br>
+          </i>
+        </p>
+        <a href="{% url 'games:create_game_pairsmode'%}" class="btn btn-primary">Get started</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

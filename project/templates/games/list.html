@@ -1,0 +1,15 @@
+
+<h1>Games</h1>
+<ul>
+{% for game in object_list %}
+    <li>{{ game.title }} - {{ game.description }} - {{ game.slug }}
+        <a href="{% url 'games:update_game' game.slug%}">Edit</a>
+        <a href="{% url 'games:delete_game' game.slug%}">Delete</a>
+        <a href="{% url 'games:xml_game' game.slug%}">XML</a>
+        <a href="{% url 'games:game' game.slug%}">Preview</a> ({{ game.user }})
+      </li>
+
+{% empty %}
+    <li>No articles games.</li>
+{% endfor %}
+</ul>

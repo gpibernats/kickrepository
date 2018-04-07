@@ -1,0 +1,41 @@
+{% extends "project/base.html" %}
+
+{% block head_title %}Welcome to our alpha!{% endblock %}
+
+{% block body_class %} text-center {% endblock%}
+
+{% block body %}
+
+<body class="text-center">
+
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    {% block header %}
+    {{ value }}
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="kick-logo-font masthead-brand"><span>Kick</span>homework</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link {{ home }}" href="{% url 'home' %}">Home</a>
+            <a class="nav-link {{ teach }}" href="{% url 'teach' %}">Teach</a>
+          </nav>
+        </div>
+      </header>
+    {% endblock%}
+
+    <main role="main" class="inner cover">
+
+      {% block main %} {% endblock%}
+
+    </main>
+
+
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Version 0.1, by <a href="mailto:kickhomework@gmail.com?Subject=Kickhomework%20comment">Kickhomework</a> {% now "Y" %}.</p>
+      </div>
+    </footer>
+  </div>
+
+
+{% endblock%}

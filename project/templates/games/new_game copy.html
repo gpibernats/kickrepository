@@ -1,0 +1,73 @@
+{% extends "project/base.html" %}
+{% load static %}
+
+{% block head_title %}New game{% endblock %}
+
+{% block body %}
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1>New game</h1>
+    <p>
+      We have blablalbalbla
+    </p>
+
+    <div class="kick-center-grid-big mdl-grid">
+
+
+      <div class="mdl-cell mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__media">
+              <img class="kick-game-img" src="{% static 'project/img/game_test.png' %}" border="0" alt="">
+          </div>
+          <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Rigth-Wrong mode</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{% url 'games:create_game_rwmode'%}">get started</a>
+          </div>
+      </div>
+
+
+      <div class="mdl-cell mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__media">
+              <img class="kick-game-img" src="{% static 'project/img/game_test.png' %}" border="0" alt="">
+          </div>
+          <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Pairs mode</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{% url 'games:create_game_pairsmode'%}">get started</a>
+          </div>
+      </div>
+
+
+      <div class="mdl-cell mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__media">
+              <img class="kick-game-img" src="{% static 'project/img/game_test.png' %}" border="0" alt="">
+          </div>
+          <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Groups mode</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="#">get started</a>
+          </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}

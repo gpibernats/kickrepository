@@ -1,0 +1,20 @@
+$color-bg: #f5f5f5;
+$color-text: #333;
+$color-main: red;
+$logo-font: 'Tragic-marker';
+
+
+
+@font-face {
+  font-family: 'Tragic-marker';
+  src: url('../fonts/Tragic-marker/TragicMarker-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Tragic-marker/TragicMarker-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Tragic-marker/TragicMarker-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Tragic-marker/TragicMarker-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Tragic-marker/TragicMarker-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Tragic-marker/TragicMarker-Regular') format('svg'); /* Legacy iOS */
+}
+
+.kick-logo-font {
+    font-family: $logo-font !important;
+}

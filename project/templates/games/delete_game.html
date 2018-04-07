@@ -1,0 +1,14 @@
+{% extends "project/teach.html" %}
+
+{% block head_title %}Delete game{% endblock %}
+
+{% block main %}
+  <!-- <div class="text-center"> -->
+    <h3>Remove "{{game_data.title}}"</h3>
+    <p>Are you sure you want to remove the game?</p>
+    {% include "project/_form.html" with button_label="Delete"%}
+
+
+  <!-- </div> -->
+
+{% endblock %}

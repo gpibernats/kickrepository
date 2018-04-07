@@ -1,0 +1,12 @@
+{% extends "project/base.html" %}
+
+{% block head_title %}Teach{% endblock %}
+
+{% block body %}
+
+<a type="button" class="btn btn-primary" href="{% url 'games:create_game' %}">Create game</a>
+
+<h3>Game list</h3>
+{% include "games/list.html" %}
+
+{% endblock%}

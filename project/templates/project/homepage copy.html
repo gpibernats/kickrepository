@@ -1,0 +1,32 @@
+{% extends "project/base.html" %}
+
+{% block head_title %}Welcome to our alpha!{% endblock %}
+
+{% block body_class %} text-center {% endblock%}
+
+{% block body %}
+
+
+  <header>
+    <a class="navbar-brand" href="#">
+      Kickhomework
+    </a>
+    <a class="nav-link" href="{% url 'teach' %}">Teach</a>
+    <a class="nav-link">Play</a>
+  </header>
+
+
+  <main>
+
+    <h1>Welcome to our alpha version!</h1>
+
+    <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Introduce your game code" aria-label="Introduce your game code">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button">Play</button>
+    </div>
+  </div>
+
+</main>
+
+{% endblock%}

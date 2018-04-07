@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>Game</title>
+  </head>
+  <body style="margin:0px;padding:0px;overflow:hidden">
+		{% load static %}
+    {% with 'games/games_source/'|add:game.folder_name|add:'/index.html' as static_game_source %}
+		<iframe src="{% static static_game_source %}" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+    {% endwith %}
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{% extends "project/alpha_base.html" %}
+
+{% block head_title %}Play game{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block main %}
+<h2>{{ game_data.title }} </h2>
+<h4>{{ game_data.description }}</h4>
+
+<div class="alert alert-dark" role="alert">
+  Choose the game you want to play!
+</div>
+
+<div class="container">
+  <div class="row">
+      {% for game in games %}
+
+        <div class="col-md-4 col-sm-6" style="padding-top:15px;">
+          <div class="card" style="width: 18rem;">
+            {% load static %}
+            {% with 'games/games_img/'|add:game.image_name as static_game_image %}
+            <img class="card-img-top" src="{% static static_game_image %}">
+            {% endwith %}
+            <div class="card-body">
+              <h5 class="card-title">{{ game.title }}</h5>
+              <p class="card-text">Soon description for games.</p>
+              <a href="{% url 'games:play_game' game_data.slug game.slug%}" class="btn btn-primary">Play</a>
+            </div>
+          </div>
+        </div>
+
+      {% empty %}
+        <p>
+          Thre is no games available.
+        </p>
+      {% endfor %}
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

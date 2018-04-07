@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<meta>
+		<n-pairs>5</n-pairs>
+		<max-n-shorts>3</max-n-shorts>
+	</meta>
+	<title>Animales</title>
+	
+	<description>Escoje al animal adecuado</description>
+	
+    <pair>
+		<long>Animal con melena</long>
+		<short>León</short>
+		<short>Lion</short>
+	</pair>
+	<pair>
+		<long>Animal acuático muy inteligente</long>
+		<short>Delfín</short>
+	</pair>
+	<pair>
+		<long>El ---- aulla</long>
+		<short>Lobo</short>
+		<short>Perro</short>
+		<short>Cachorro</short>
+	</pair>
+	<pair>
+		<long>Parece un dátil</long>
+		<short>Cucaracha</short>
+	</pair>
+	<pair>
+		<long>El mejor amigo del hombre</long>
+		<short>Perro</short>
+	</pair>
+
+</game>
