@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<meta>
+		<n-tests>3</n-tests>
+		<max-n-rights>2</max-n-rights>
+		<max-n-wrongs>4</max-n-wrongs>
+	</meta>
+	<title>Nuestro país</title>
+	
+	<description>Cuanto sabes sobre España</description>
+	<test>
+ 		<question>¿Cuál es la capital de España?</question>
+		<right>Madrid</right>
+		<wrong>Barcelona</wrong>
+		<wrong>Valencia</wrong>
+	</test>
+	<test>
+ 		<question>¿Cuál es el idioma oficial de Cataluña?</question>
+		<right>Español</right>
+		<right>Catalán</right>		
+		<wrong>Inglés</wrong>
+	</test>
+	<test>
+ 		<question>¿Cuáles son los colores de la bandera Española?</question>
+		<right>Rojo, amarillo y rojo</right>		
+		<wrong>Amarillo y rojo</wrong>
+		<wrong>Azul, blanco y rojo</wrong>
+		<wrong>Verde, blanco y rojo</wrong>
+		<wrong>Rojo, amarillo y azul</wrong>
+	</test>
+</game>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<title>Sé positivo</title>
+	
+	<description>Escoje las palabras postivas y rechaza las negativas (esto son datos de prueba).</description>
+	
+ 	<right-words>
+    	<word>sí</word>
+    	<word>afirmativo</word>
+		<word>correcto</word>
+  	</right-words>
+
+ 	<wrong-words>
+		<word>no</word>
+		<word>negativo</word>
+	</wrong-words>
+</game>
